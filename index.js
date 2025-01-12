@@ -23,8 +23,8 @@ db.Project.belongsToMany(db.User, { through: 'UserProjects', foreignKey: 'Projec
 db.Project.hasMany(db.Task, { foreignKey: 'projectId' });
 db.Task.belongsTo(db.Project, { foreignKey: 'projectId' });
 
-// testing vercel deployment
-app.get("/", (req, res) => res.send("Express on Vercel"));
+// testing render deployment
+app.get("/", (req, res) => res.send("Express on Render"));
 
 // register routes
 app.use('/api', userRoutes)
